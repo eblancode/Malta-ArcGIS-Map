@@ -1,0 +1,124 @@
+html, body, #divMap, #cpCenter {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    font-family: "Trebuchet MS";
+}
+#divRenderer {
+    position: absolute;
+    left: 27px;
+    bottom: 27px;
+}
+#divSearch {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 28px;
+    left: 74px;
+}
+.glyphicon {
+    cursor: pointer;
+}
+/*.glyphicon:hover{
+  color: hotpink;
+}*/
+/*Class for hide elements in the map*/
+
+.hidden {
+    display: none;
+}
+#divGrid {
+    display: block;
+    position: absolute;
+    left: 20px;
+    bottom: 35px;
+    width: 1098px;
+    height: 250px;
+}
+#divGrid_gridContentPane {
+    width: 1098px !important;
+}
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+#layerList {
+    position: absolute;
+    display: block;
+    overflow: auto;
+    width: 200px;
+    top: 120px;
+    right: 20px;
+    height: 39%;
+    border-color: white;
+}
+/*#divLegend {
+    position: absolute;
+    display: block;
+    overflow: auto;
+    width: 200px;
+    top: 190px;
+    left: 20px;
+    height: 29%;
+    border-color: white;
+}*/
+.esriLayerList, .esriTitle, .esriContainer {
+    color: white;
+    background-color: #222;
+    font-family: sans-serif;
+    border-color: white;
+    border: 1px solid transparent !important ;
+    /*
+    border-right-color: white !important;
+    border-bottom-color: white !important;
+    border-left-color: white !important;
+    */
+}
+.dijitTitlePaneContentInner, .dijitTitlePaneContentInner, .dijitTitlePaneTitleFocus, .dijitTitlePane{
+  color: white;
+  background-color: #222;
+  font-family: sans-serif;
+  border-color: white;
+  border: 1px solid transparent !important ;
+}
+#divMap_zoom_slider, #divSearch, #divGallery {
+    position: absolute;
+    top: 70px;
+}
+#divGallery {
+    right: 20px;
+    z-index: 3;
+}
+#divContentGallery {
+    width: 380px;
+    height: 280px;
+    overflow: auto;
+}
+#divLocate {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 2;
+}
+#logoGeosys{
+    position: absolute;
+
+    left: 5px;
+    bottom: 10px;
+    width: 360px;
+    height: 40px;
+    opacity: 0.7;
+}
+.text {
+    text-align: center;
+    color: white;
+    font-size: small;
+    margin-right: 200px;
+}

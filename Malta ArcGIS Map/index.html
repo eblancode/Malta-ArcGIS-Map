@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Malta map</title>
+
+  <!-- Configure dojo for asynchronous module loading -->
+  <script>
+    var dojoConfig = {
+      async: true
+    };
+  </script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="http://js.arcgis.com/3.16/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.16/esri/css/esri.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="http://js.arcgis.com/3.16/"></script>
+  <script src="js/map.js"></script>
+</head>
+
+<body class="claro">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <a class="navbar-brand"><span class="glyphicon glyphicon-pencil" title="Start drawing a polygon"></span></a>
+      <a class="navbar-brand"><span class="glyphicon glyphicon-trash" title="Clear map graphics and grid data"></span></a>
+      <a class="navbar-brand"><span class="glyphicon glyphicon-th-large" title="Change basemap"></span></a>
+      <a class="navbar-brand"><span class="glyphicon glyphicon-stats" title="Show/Hide feature table"></span></a>
+      <a class="navbar-brand"><span class="glyphicon glyphicon-th-list" title="Show/Hide layers"></span></a>
+      <br/><p class="text"></p>
+    </div>
+  </nav>
+  <div id="cpCenter" data-dojo-type="dijit/layout/ContentPane">
+    <div id="divLocate"></div>
+    <div id="divSearch"></div>
+    
+    <div id="divMap" data-dojo-type="dijit/layout/ContentPane">
+      <div id="divGallery">
+        <div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Switch Basemap', closable:false, open:false">
+          <div id="divContentGallery" data-dojo-type="dijit/layout/ContentPane">
+            <div id="divGalleryImages"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <image src="img/GeosysLogo.png" id="logoGeosys"></image>
+    <div id="divRenderer"></div>
+    <!--<div data-dojo-type="dijit/layout/ContentPane" id="legendPane" data-dojo-props="title:'Legend', selected:true">
+        <div id="divLegend"></div>
+    </div>-->
+    <div id="divGrid" class="hidden"></div>
+    <div id="layerList" class="hidden"></div>
+  </div>
+</body>
+
+</html>
